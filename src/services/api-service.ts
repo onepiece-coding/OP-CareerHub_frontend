@@ -3,7 +3,7 @@
  */
 
 import axios, { AxiosError, type InternalAxiosRequestConfig } from "axios";
-import { logoutUser } from "@/store/auth/auth-slice";
+// import { logoutUser } from "@/store/auth/auth-slice";
 
 const api = axios.create({
   baseURL:
