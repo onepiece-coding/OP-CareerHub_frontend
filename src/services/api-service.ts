@@ -8,7 +8,8 @@ import { logoutUser } from "@/store/auth/auth-slice";
 const api = axios.create({
   baseURL:
     import.meta.env.MODE === "development"
-      ? "http://localhost:8000/api/v1"
+      ? // ? "http://localhost:8000/api/v1"
+        "https://op-careerhub-backend.onrender.com/api/v1"
       : "https://op-careerhub-backend.onrender.com/api/v1",
   withCredentials: true,
 });
@@ -65,12 +66,14 @@ api.interceptors.response.use(
         isRefreshing = false;
         processQueue(refreshError); // Reject all pending requests
 
-        const { store } = await import("@/store");
-        store.dispatch(logoutUser());
+        console.log(refreshError);
 
-        if (!window.location.pathname.includes("/auth/login")) {
-          window.location.href = "/auth/login";
-        }
+        // const { store } = await import("@/store");
+        // store.dispatch(logoutUser());
+
+        // if (!window.location.pathname.includes("/auth/login")) {
+        //   window.location.href = "/auth/login";
+        // }
 
         return Promise.reject(refreshError);
       }
