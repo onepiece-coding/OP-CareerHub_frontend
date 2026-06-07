@@ -1,13 +1,10 @@
 {
-  "homepage": "https://onepiece-coding.github.io/OP-CareerHub_frontend",
   "name": "frontend",
   "version": "0.0.0",
   "type": "module",
   "private": true,
   "scripts": {
     "build": "tsc -b && vite build",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build",
     "preview": "vite preview",
     "lint": "eslint .",
     "dev": "vite"
