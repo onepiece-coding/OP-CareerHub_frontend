@@ -20,7 +20,7 @@
 
 ## ✨ Live Demo
 
-🚀 **[careerhub.example.com](https://op-career-hub-frontend.vercel.app/)**
+🚀 **[https://op-career-hub-frontend.vercel.app/](https://op-career-hub-frontend.vercel.app/)**
 
 **Test credentials**
 
